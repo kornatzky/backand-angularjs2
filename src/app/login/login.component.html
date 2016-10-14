@@ -1,0 +1,76 @@
+<h1>Login</h1>
+
+<h2>Authentication</h2>
+
+<div>
+    <label *ngIf="auth_status == 'OK'"><button type="button" class="btn btn-warning" (click)="signOut()">Sign Out</button>{{loggedInUser}}</label>
+</div>
+
+<div>
+    <label>Choose authentication type:</label>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="username" class="col-xs-2 col-form-label">Username</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" [value]="username" (input)="username = $event.target.value" id="username">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="form-group row">
+          <label for="password" class="col-xs-2 col-form-label">Password</label>
+          <div class="col-xs-10">
+            <input class="form-control"  type="password" [value]="password" (input)="password = $event.target.value" id="password">
+          </div>
+        </div>
+    </li>
+</ul>
+
+<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary" (click)="getAuthTokenSimple()">Token Auth</button>
+    <button type="button" class="btn btn-info" (click)="useAnonymousAuth()">Anonymous Auth</button>
+</div>
+
+<div class="alert alert-success" role="alert">
+  <label>Using {{auth_type}} authentication</label>
+</div>
+<div class="alert alert-danger" role="alert">
+  <label [class.alert]="is_auth_error" [class.alert-danger]="is_auth_error">{{auth_status}}</label>
+</div>
+    
+
+<hr/>
+<h2>Change Password</h2>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="oldPassword" class="col-xs-2 col-form-label">Old Password</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="password" [value]="oldPassword" (input)="oldPassword = $event.target.value" id="oldPassword">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="newPassword" class="col-xs-2 col-form-label">New Password</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="password" [value]="newPassword" (input)="newPassword = $event.target.value" id="newPassword">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="confirmPassword" class="col-xs-2 col-form-label">Confirm Password</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="password" [value]="confirmNewPassword" (input)="confirmNewPassword = $event.target.value" id="confirmPassword">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <button type="button" class="btn btn-primary" (click)="signUp()">Sign Up</button>
+    </li>
+</ul>

@@ -1,0 +1,63 @@
+<h1>Sign Up</h1>
+
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="email" class="col-xs-2 col-form-label">Username</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="email" [value]="email" (input)="email = $event.target.value" id="email">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="first-name" class="col-xs-2 col-form-label">First Name</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" [value]="firstName" (input)="firstName = $event.target.value" id="first-name">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="last-name" class="col-xs-2 col-form-label">Last Name</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" [value]="lastName" (input)="lastName = $event.target.value" id="last-name">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="newPassword" class="col-xs-2 col-form-label">New Password</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="password" [value]="newPassword" (input)="newPassword = $event.target.value" id="newPassword">
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="form-group row">
+            <label for="confirmPassword" class="col-xs-2 col-form-label">Confirm Password</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="password" [value]="confirmNewPassword" (input)="confirmNewPassword = $event.target.value" id="confirmPassword">
+            </div>
+        </div>
+    </li>    
+    <li class="list-group-item">
+        <button type="button" class="btn btn-primary" (click)="changePassword()">Change Password</button>
+    </li>
+</ul>
+
+<h2>Social</h2>
+<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary" (click)="socialSignin('facebook')">Facebook</button>
+    <button type="button" class="btn btn-secondary" (click)="socialSignin('github')">GitHub</button>
+    <button type="button" class="btn btn-info" (click)="socialSignin('google')">Google</button>
+</div>
+
+
+<h3>In App Social</h3>
+<div class="button-bar">
+    <button type="button" class="btn btn-primary" (click)="inAppSocial('facebook')">Facebook</button>
+</div>
+
+ 

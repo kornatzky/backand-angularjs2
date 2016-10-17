@@ -43,6 +43,18 @@ export class SignupComponent implements OnInit {
   }
 
   public socialSignin(provider) {
+    var $obs = this.backandService.socialAuth(provider, false);
+    $obs.subscribe(                
+        data => {
+            console.log('Sign up succeeded with:' + provider);           
+        },
+        err => {
+            this.backandService.logError(err)
+        },
+        () => console.log('Finish Auth'));
+  }
+
+  public socialSignup(provider) {
     var $obs = this.backandService.socialAuth(provider, true);
     $obs.subscribe(                
         data => {

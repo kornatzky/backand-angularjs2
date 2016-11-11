@@ -11,9 +11,9 @@ export class AppComponent {
   title = 'app works!';
 
 	constructor(private router: Router, private backandService:BackandService){
-		this.backandService.setAppName('todo33353');
-		this.backandService.setSignUpToken('215e5812-5789-4475-8ccb-42f3232da176');
-		this.backandService.setAnonymousToken('43a174e6-1a88-46dd-9081-99d3d22131a6');
+		this.backandService.setAppName('your app name');
+        this.backandService.setSignUpToken('your signup token');
+        this.backandService.setAnonymousToken('your anonymousToken token');
 	}
 
 	public navigate(url) {

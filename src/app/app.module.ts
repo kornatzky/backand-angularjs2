@@ -9,13 +9,15 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CrudComponent } from './crud/crud.component';
 import { BackandService } from 'angular2bknd-sdk';
+import { FilesComponent } from './files/files.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    CrudComponent
+    CrudComponent,
+    FilesComponent
   ],
   imports: [
     BrowserModule,

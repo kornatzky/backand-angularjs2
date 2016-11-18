@@ -35,8 +35,12 @@ export class CrudComponent {
     }
 
     public postItem() {
-        
-        this.backandService.postItem('todo', this.name, this.description).subscribe(
+        let item = {
+            name: this.name, 
+            description: this.description
+        };
+
+        this.backandService.postItem('todo', item).subscribe(
                 data => {
                     // add to beginning of array
                     this.items.unshift({ id: null, name: this.name, description: this.description });
@@ -73,7 +77,18 @@ export class CrudComponent {
             q = q.trim();
         }
 
-        this.backandService.filterItems('todo', q)
+        let filter = 
+            [
+              {
+                fieldName: 'name',
+                operator: 'contains',
+                value: q
+              }
+            ]
+        ;
+
+
+        this.backandService.filterItems('todo', filter)
             .subscribe(
                 data => {
                     console.log("subscribe", data);

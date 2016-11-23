@@ -40,7 +40,7 @@ export class CrudComponent {
             description: this.description
         };
 
-        this.backandService.postItem('todo', item).subscribe(
+        this.backandService.create('todo', item).subscribe(
                 data => {
                     // add to beginning of array
                     this.items.unshift({ id: null, name: this.name, description: this.description });
@@ -54,7 +54,7 @@ export class CrudComponent {
     }
 
     public getItems() {
-       this.backandService.getItems('todo')
+       this.backandService.getList('todo')
             .subscribe(
                 data => {
                     console.log(data);
@@ -88,7 +88,7 @@ export class CrudComponent {
         ;
 
 
-        this.backandService.filterItems('todo', filter)
+        this.backandService.getList('todo', null, null, filter)
             .subscribe(
                 data => {
                     console.log("subscribe", data);

@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
       alert('Passwords should match');
       return;
     }
-    var $obs = this.backandService.signUp(this.email, this.signUpPassword, this.confirmPassword, this.firstName, this.lastName);
+    var $obs = this.backandService.signup(this.email, this.signUpPassword, this.confirmPassword, this.firstName, this.lastName);
     $obs.subscribe(                
       data => {
           alert('Sign up succeeded');

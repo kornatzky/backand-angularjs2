@@ -23,7 +23,7 @@ export class FilesComponent implements OnInit {
 	    let reader = new FileReader();
 	    reader.onload = function(e) {
 	      let data = e.currentTarget.result;
-	      backand.upload("todo", "files", file.name, data).subscribe(
+	      backand.uploadFile("todo", "files", file.name, data).subscribe(
 	      	data => { 
 	      		console.log(data);
 	      	}, 

@@ -20,6 +20,7 @@
     "@angular/platform-browser": "2.0.0",
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/router": "3.0.0",
+    "angular-cli": "^1.0.0-beta.21",
     "angular2bknd-sdk": "latest",
     "core-js": "^2.4.1",
     "es6-shim": "^0.35.0",
@@ -31,8 +32,7 @@
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.45",
-    "@types/socket.io-client": "^1.4.27",
-    "angular-cli": "1.0.0-beta.16",
+    "@types/socket.io-client": "^1.4.29",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",

@@ -28,9 +28,9 @@
     </li>
     <li class="list-group-item">
         <div class="form-group row">
-            <label for="newPassword" class="col-xs-2 col-form-label">New Password</label>
+            <label for="newPassword" class="col-xs-2 col-form-label">Password</label>
             <div class="col-xs-10">
-                <input class="form-control" type="password" [value]="newPassword" (input)="newPassword = $event.target.value" id="newPassword">
+                <input class="form-control" type="password" [value]="signUpPassword" (input)="signUpPassword = $event.target.value" id="signUpPassword">
             </div>
         </div>
     </li>
@@ -38,12 +38,12 @@
         <div class="form-group row">
             <label for="confirmPassword" class="col-xs-2 col-form-label">Confirm Password</label>
             <div class="col-xs-10">
-                <input class="form-control" type="password" [value]="confirmNewPassword" (input)="confirmNewPassword = $event.target.value" id="confirmPassword">
+                <input class="form-control" type="password" [value]="confirmPassword" (input)="confirmPassword = $event.target.value" id="confirmPassword">
             </div>
         </div>
     </li>    
     <li class="list-group-item">
-        <button type="button" class="btn btn-primary" (click)="changePassword()">Change Password</button>
+        <button type="button" class="btn btn-primary" (click)="signUp()">Sign Up</button>
     </li>
 </ul>
 

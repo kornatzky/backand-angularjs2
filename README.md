@@ -1,3 +1,6 @@
+This example project is depreciated. 
+Use the newer [Backand Angular JS2](https://github.com/kornatzky/angularjs2_backand_javascript) example project. It uses the newest Backand Angular JS 2 SDK.
+
 # MyDreamApp
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
